@@ -1,8 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Unica+One&family=Open+Sans:wght@300;600&display=swap');
+
+:root {
+  --mainColor: #EFA66F;
+  --lightOrange: #fcede2;
+  --mainBlack: #222;
+  --mainTransition: all 0.2s ease-in-out;
+  --letterSpacing: 0.1rem;
+}
+
 
 body {
-    font-family: 'Montserrat',
-    sans-serif;
-  background: var(--mainGrey) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
   color: var(--mainBlack);
+}
+
+.page-margin{
+  padding-top: 4rem;
+}
+
+.text-title {
+  font-family: 'Unica One', sans-serif;
+  font-size: 1.5rem;
+}
+
+.main-link {
+  padding: 0.5rem 3rem;
+  color: var(--mainColor);
+  display: inline-block;
+  border: 2px solid var(--mainColor);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-color: white;
+  transition: var(--mainTransition);
+  font-weight: bold;
+}
+
+.main-link:hover {
+  background-color: var(--mainColor);
+  color: white;
+  text-decoration: none;
+}
+
+.reverse-link {
+  color: white;
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+}
+
+.reverse-link:hover {
+  background-color: var(--mainBlack);
+  border: 2px solid var(--mainBlack);
+
+}
+
+.link-title {
+  color: var(--mainBlack);
+}
+
+.link-btn {
+  color: var(--mainBlack);
+  border-bottom: 2px solid #FC917F;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.link-btn:hover {
+  color: var(--mainBlack);
+  text-decoration: none;
 }

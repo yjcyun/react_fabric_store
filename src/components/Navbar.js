@@ -4,6 +4,7 @@ import logo from '../images/logo.svg';
 import logo2 from '../images/logo2.svg';
 import { FaBars, FaCartPlus } from 'react-icons/fa';
 import { ProductConsumer } from '../context';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -13,12 +14,12 @@ const Navbar = () => {
         return (
           <NavbarWrapper>
             <div className="nav-center">
-              <FaBars className="nav-icon" onClick={handleSidebar} />
-              <div>
+              <FaBars className="nav-icon bars" onClick={handleSidebar} />
+              <Link to='/' className="logo-link">
                 <img src={logo} alt="company logo" />
-                <span className="font-weight-bold"> THREAD & NEEDLE </span>
+                <span className="text-title"> THREAD & NEEDLE </span>
                 <img src={logo2} alt="company logo" />
-              </div>
+              </Link>
       
               <div className="nav-cart">
                 <FaCartPlus className="nav-icon" onClick={handleCart} />
@@ -37,7 +38,9 @@ const NavbarWrapper = styled.nav`
   position:sticky;
   top:0;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1.3rem 1.5rem;
+  background-color: #fff;
+  z-index:1;
   .nav-center{
     display:flex;
     align-items: center;
@@ -45,15 +48,19 @@ const NavbarWrapper = styled.nav`
     max-width: 1170px;
     margin: 0 auto;
   }
+  .logo-link{
+   color: var(--mainBlack);
+   text-decoration:none;
+  }
   .nav-icon{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     cursor: pointer
   }
   .nav-cart{
     position:relative;
   }
   .cart-items{
-    background: #EFA66F;
+    background: var(--mainColor);
     color: white;
     position:absolute;
     font-size: 0.85rem;
@@ -61,6 +68,11 @@ const NavbarWrapper = styled.nav`
     right: -8px;
     padding: 0 5px;
     border-radius: 50%;
+  }
+  @media (min-width: 768px) {
+    .nav-icon.bars{
+      visibility:hidden;
+    }
   }
 `;
 

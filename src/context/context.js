@@ -1,13 +1,35 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { linkData } from './linkData';
+import { socialIcons } from './socialData';
+import { items } from './productData';
 
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
-    sidebarOpen:false,
-    cartOpen:false,
-    cartItems:0
+    sidebarOpen: false,
+    cartOpen: false,
+    links: linkData,
+    social: socialIcons,
+    cart: [],
+    cartItems: 0,
+    cartSubtotal: 0,
+    cartTax: 0,
+    cartTotal: 0,
+    storeProducts: [],
+    filteredProducts: [],
+    featuredProducts: [],
+    singleProduct: {},
+    loading: true
   };
+
+  componentDidMount() {
+    this.setProducts();
+  }
+
+  setProducts = (products) => {
+
+  }
 
   handleSidebar = () => {
     this.setState({ sidebarOpen: !this.state.sidebarOpen });
@@ -26,10 +48,10 @@ class ProductProvider extends Component {
     return (
       <ProductContext.Provider value={{
         ...this.state,
-        handleSidebar:this.handleSidebar,
-        handleCart:this.handleCart,
-        closeCart:this.closeCart,
-        openCart:this.closeCart
+        handleSidebar: this.handleSidebar,
+        handleCart: this.handleCart,
+        closeCart: this.closeCart,
+        openCart: this.closeCart
       }}>
         {this.props.children}
       </ProductContext.Provider>
