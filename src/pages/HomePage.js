@@ -6,6 +6,7 @@ import Banner from '../components/HomePage/Banner';
 import storeImg from '../images/storeBcg.jpg';
 import stayConnected from '../images/stayConnected.jpg';
 import { Link } from 'react-router-dom';
+import Featured from '../components/HomePage/Featured';
 
 
 
@@ -16,6 +17,7 @@ const HomePage = () => {
         <Link to='/shop' className="main-link" style={{ margin: '1.5rem' }}>shop now</Link>
       </Hero>
       <AboutSection />
+      <Featured />
       <Banner
         title="visit our store"
         subtitle="1234 Bloor Street E, Toronto, ON"

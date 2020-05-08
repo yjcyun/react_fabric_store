@@ -6,6 +6,7 @@ import SingleProductPage from './pages/SingleProductPage';
 import VisitPage from './pages/VisitPage';
 import DefaultPage from './pages/DefaultPage';
 import ContactPage from './pages/ContactPage';
+import CartPage from './pages/CartPage';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import SideCart from './components/SideCart';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about" component={AboutPage} />
         <Route path="/visit" component={VisitPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/cart" component={CartPage} />
         <Route exact path="/shop" component={ProductsPage} />
         <Route path="/shop/:id" component={SingleProductPage} />
         <Route component={DefaultPage} />

@@ -3,7 +3,7 @@ export const items = [
     sys: { id: 0 },
     fields: {
       title: "brave enough to dream - main patriot",
-      price: 16,
+      price: 16.00,
       company: "dear stella",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -18,7 +18,7 @@ export const items = [
 
     fields: {
       title: "brave enough to dream - walkabout",
-      price: 16,
+      price: 16.00,
       company: "dear stella",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -34,7 +34,7 @@ export const items = [
 
     fields: {
       title: "moonscape",
-      price: 18,
+      price: 18.00,
       company: "dear stella",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -50,7 +50,7 @@ export const items = [
 
     fields: {
       title: "fawn & forest - leaves",
-      price: 13,
+      price: 13.00,
       company: "dear stella",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -66,7 +66,7 @@ export const items = [
 
     fields: {
       title: "dear friends - hide and seek eucalyptus",
-      price: 20,
+      price: 20.00,
       company: "Cotton + Steel",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -82,13 +82,13 @@ export const items = [
 
     fields: {
       title: "by the seaside - happy fish yellow",
-      price: 17,
+      price: 17.00,
       company: "Cotton + Steel",
       material: "100% Unbleached cotton",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-      featured: false,
+      featured: true,
 
       image: { fields: { file: { url: "img/img-6.jpg" } } }
     }
@@ -99,7 +99,7 @@ export const items = [
 
     fields: {
       title: "into the woods - bleech tree sky",
-      price: 16,
+      price: 16.00,
       company: "Cotton + Steel",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -115,13 +115,13 @@ export const items = [
 
     fields: {
       title: "kaikoura - drifting jellies ocean",
-      price: 16,
+      price: 16.00,
       company: "Cotton + Steel",
       material: "100% cotton",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-      featured: false,
+      featured: true,
 
       image: { fields: { file: { url: "img/img-8.jpg" } } }
     }
@@ -131,7 +131,7 @@ export const items = [
 
     fields: {
       title: "bramble - animals red",
-      price: 18,
+      price: 18.00,
       company: "moda",
       material: "100% cotton",
       width: "44\" wide",
@@ -147,7 +147,7 @@ export const items = [
 
     fields: {
       title: "merriment - trees holly",
-      price: 16,
+      price: 16.00,
       company: "moda",
       material: "100% cotton",
       width: "44\" wide",
@@ -163,7 +163,7 @@ export const items = [
 
     fields: {
       title: "merriment - springs berry",
-      price: 21,
+      price: 21.00,
       company: "moda",
       material: "100% cotton",
       width: "44\" wide",
@@ -179,7 +179,7 @@ export const items = [
 
     fields: {
       title: "safari life - animal stamps amber",
-      price: 12,
+      price: 12.00,
       company: "moda",
       material: "100% cotton",
       width: "44\" wide",
@@ -195,7 +195,7 @@ export const items = [
 
     fields: {
       title: "bliss - roses black (rose gold)",
-      price: 21,
+      price: 21.00,
       company: "riley blake designs",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -211,7 +211,7 @@ export const items = [
 
     fields: {
       title: "flower market - wallerpaper light coral",
-      price: 15,
+      price: 15.00,
       company: "riley blake designs",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -227,7 +227,7 @@ export const items = [
 
     fields: {
       title: "high adventure 2 - teepee tan",
-      price: 8,
+      price: 8.00,
       company: "riley blake designs",
       material: "100% cotton",
       width: "44-45\" wide",
@@ -235,7 +235,7 @@ export const items = [
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
       featured: false,
 
-      image: { fields: { file: { url: "img/img-14.jpg" } } }
+      image: { fields: { file: { url: "img/img-15.jpg" } } }
     }
   },
   {
@@ -243,13 +243,13 @@ export const items = [
 
     fields: {
       title: "modern farmhouse - petite flowers black",
-      price: 13,
+      price: 13.00,
       company: "riley blake designs",
       material: "100% cotton",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
-      featured: false,
+      featured: true,
 
       image: { fields: { file: { url: "img/img-16.jpg" } } }
     }

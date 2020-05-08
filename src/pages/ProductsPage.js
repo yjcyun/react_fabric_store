@@ -1,9 +1,11 @@
 import React from 'react'
+import Products from '../components/ProductsPage/Products';
 
 const ProductsPage = () => {
   return (
-    <div>
-      ProductsPage
+    <div className="page-margin">
+      
+      <Products />
     </div>
   )
 }

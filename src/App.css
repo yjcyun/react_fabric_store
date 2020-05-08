@@ -57,6 +57,10 @@ body {
 .link-title {
   color: var(--mainBlack);
 }
+.link-title:hover{
+  color: var(--mainColor);
+  text-decoration: none;
+}
 
 .link-btn {
   color: var(--mainBlack);
@@ -68,4 +72,25 @@ body {
 .link-btn:hover {
   color: var(--mainBlack);
   text-decoration: none;
+}
+
+.cart-icon {
+  cursor:pointer;
+  color: var(--mainBlack);
+  font-size: 1rem;
+}
+
+.cart-icon:hover{
+  color: var(--mainColor);
+}
+
+.cart-box{
+  position:relative;
+}
+
+.remove-btn{
+  position:absolute;
+  right: 0;
+  top:0;
+  font-size: 1.3rem;
 }
