@@ -1,7 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
 import Title from '../components/Title';
-
 import aboutBcg from '../images/aboutBcg.jpg';
 
 const AboutPage = () => {
@@ -24,12 +22,12 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <AboutWrapper className="clients">
+      <div className="clients">
         <Title title="clients include" />
         <div className="container mt-5">
           <div className="row">
             <div className="col-7 col-md-4 text-capitalize text-center mx-auto">
-              <p className="mb-0">jane eyre<br/>coco chanel<br/>marc jacobs<br/>michael kors<br/>vera wang<br/>givenchy<br/>
+              <p className="mb-0">jane eyre<br />coco chanel<br />marc jacobs<br />michael kors<br />vera wang<br />givenchy<br />
               </p>
             </div>
             <div className="col-7 col-md-4 text-capitalize text-center mx-auto pb-0">
@@ -42,14 +40,9 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-      </AboutWrapper>
+      </div>
     </div>
-  )
+  );
 }
 
-const AboutWrapper=styled.section`
-  list{
-    margin-bottom: 0!important;
-  }
-`;
-export default AboutPage
+export default AboutPage;

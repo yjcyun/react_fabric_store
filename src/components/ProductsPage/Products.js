@@ -9,7 +9,7 @@ const Products = () => {
       {value => {
         const { filteredProducts } = value;
         return (
-          <section className="py-5">
+          <section className="page-margin">
             <div className="container">
               <Title title="products" />
               <div className="row py-5">
@@ -21,10 +21,10 @@ const Products = () => {
               </div>
             </div>
           </section>
-        )
+        );
       }}
     </ProductConsumer>
-  )
+  );
 }
 
-export default Products
+export default Products;

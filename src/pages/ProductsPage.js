@@ -3,8 +3,7 @@ import Products from '../components/ProductsPage/Products';
 
 const ProductsPage = () => {
   return (
-    <div className="page-margin">
-      
+    <div>
       <Products />
     </div>
   )

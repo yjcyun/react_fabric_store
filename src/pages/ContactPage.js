@@ -32,7 +32,7 @@ const ContactPage = () => {
           <button
             type="submit"
             value="send"
-            className="main-link reverse-link submit-btn">submit</button>
+            className="main-link submit-btn">submit</button>
         </form>
       </ContactWrapper>
     </div>
@@ -41,14 +41,14 @@ const ContactPage = () => {
 
 const ContactWrapper = styled.div`
   input, textarea{
-    width: 20rem;
+    width:25rem;
     padding: 0.5rem;
-    border: 1px solid var(--mainColor);
+    border: 1px solid var(--mainBlack);
     outline: none;
   }
 
   .submit-btn{
-    width: 20rem;
+    width: 25rem;
   }
 `;
 

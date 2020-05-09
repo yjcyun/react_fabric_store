@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../components/Title';
+import Favourites from '../components/Favourites';
 import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../context';
 
@@ -11,7 +11,6 @@ const SingleProductPage = () => {
         const { singleProduct, addToCart, loading } = value;
 
         if (loading) {
-          console.log('loading...');
           return <h1>product loading...</h1>
         }
 
@@ -32,38 +31,28 @@ const SingleProductPage = () => {
                   <p className="my-4">{description}</p>
                   <p>{material}</p>
                   <p>{width}</p>
-                  <div className="col-6 d-inline-block px-0">
-                    <div className="input-group mb-3">
-                      <div className="input-group-prepend">
-                        <button className="btn btn-outline-secondary" type="button">-</button>
-                      </div>
-                      <input type="text" className="form-control" placeholder="0.25yds" step="0.25" min="0.25"/>
-                      <div className="input-group-append">
-                        <button className="btn btn-outline-secondary">+</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6 d-inline-block">
-                    <button className="btn input-group btn-secondary text-uppercase text-center" onClick={() => addToCart(id)}>add to cart</button>
+               
+                  <div className="col-8 d-inline-block px-0">
+                    <button className="main-link text-uppercase text-center " onClick={() => addToCart(id)}>add to cart</button>
                   </div>
                 </div>
               </div>
             </div>
+            <Favourites />
           </SingleWrapper>
-        )
+        );
       }}
     </ProductConsumer>
+    
   );
 }
 
 const SingleWrapper = styled.section`
 font-family: 'Montserrat', sans-serif;
 span{
-  color: #AF729B;
+  color: var(--purple);
 }
-.btn{
-  border-radius:0;
-}
+
 `;
 
 export default SingleProductPage;

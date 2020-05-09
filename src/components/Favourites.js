@@ -1,20 +1,19 @@
 import React from 'react'
-import Product from '../Product';
-import Title from '../Title';
-import { ProductConsumer } from '../../context';
+import Product from './Product';
+import Title from './Title';
+import { ProductConsumer } from '../context';
 
-
-const Featured = () => {
+const Favourites = () => {
   return (
     <section className="py-5 my-5">
       <div className="container">
-        <Title title="shop featured items" />
+        <Title title="customer favourites" />
         <div className="row mt-5">
           <ProductConsumer>
             {value => {
-              const { featuredProducts } = value;
+              const { favouriteProducts } = value;
               return (
-                featuredProducts.map(item => (
+                favouriteProducts.map(item => (
                   <Product key={item.id} product={item} />
                 ))
               );
@@ -26,4 +25,4 @@ const Featured = () => {
   );
 }
 
-export default Featured;
+export default Favourites;

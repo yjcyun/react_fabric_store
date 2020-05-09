@@ -9,10 +9,9 @@ const Hero = ({ children, title }) => {
         <h1 className="title text-title">{title}</h1>
         {children}
       </div>
-    
     </HeroWrapper>
-  )
-}
+  );
+};
 
 const HeroWrapper = styled.div`
   text-align:center;
@@ -20,7 +19,7 @@ const HeroWrapper = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  height: 100vh;
+  height: 90vh;
   color: var(--mainBlack);
   background:url(${homeBcg})center/cover no-repeat;
 
@@ -34,7 +33,6 @@ const HeroWrapper = styled.div`
     letter-spacing: 0.2rem;
     font-size: 2.7rem;
     max-width: 50rem;
-    font-family: 'Unica One', cursive;
   }
   
   @media(max-width: 576px){
@@ -43,16 +41,14 @@ const HeroWrapper = styled.div`
       padding: 1rem;
     }
   }
+
   @media(min-width: 768px){
     flex-direction:row;
     .title{
       padding: 0 1rem;
       font-size: 5rem;
     }
-
-  
   }
-
 `;
 
 export default Hero

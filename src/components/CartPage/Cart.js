@@ -23,6 +23,7 @@ const Cart = () => {
               <>
                 <CartColumns />
                 <CartList />
+                <hr className="container"/>
                 <CartTotals />
               </>
             )
@@ -33,5 +34,6 @@ const Cart = () => {
     </section>
   );
 }
+
 
 export default Cart;

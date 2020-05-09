@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../context';
 
@@ -9,7 +8,7 @@ const Product = ({ product }) => {
       {value => {
         const { addToCart, setSingleProduct } = value;
         return (
-          <ProductWrapper className="col-6 mx-auto col-sm-3 my-3">
+          <div className="col-6 mx-auto col-sm-3 my-3">
             <div className="card">
               <div className="img-container">
                 <Link
@@ -23,23 +22,20 @@ const Product = ({ product }) => {
                 </Link>
               </div>
               <div className="text-center text-capitalize mt-2">
-                <Link to={`/shop/${product.id}`} className="link-title">
+                <Link to={`/shop/${product.id}`} className="dark-link-hover">
                   <p className="mb-0">{product.title}</p>
                 </Link>
-                <p className="mb-0 font-weight-bold" onClick={() => addToCart(product.id)}>${product.price}.00 / yard</p>
+                <p className="mb-0 font-weight-bold">
+                  ${product.price}.00 / yard
+                </p>
               </div>
             </div>
-          </ProductWrapper>
-        )
+          </div>
+        );
       }}
     </ProductConsumer>
-  )
+  );
 }
 
-const ProductWrapper = styled.div`
-  .card{
-    border:none;
-    padding: 0 !important;
-  }
-`;
-export default Product
+
+export default Product;

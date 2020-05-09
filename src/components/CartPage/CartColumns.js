@@ -10,17 +10,17 @@ const CartColumns = () => {
         </div>
         {/* end of single column */}
         {/* single column */}
-        <div className="col-lg-2">
+        <div className="col-lg-2 text-right">
           <p className="text-uppercase">price</p>
         </div>
         {/* end of single column */}
         {/* single column */}
-        <div className="col-lg-2">
+        <div className="col-lg-2 text-right">
           <p className="text-uppercase">quantity</p>
         </div>
         {/* end of single column */}
         {/* single column */}
-        <div className="col-lg-2">
+        <div className="col-lg-2 text-right">
           <p className="text-uppercase">total</p>
         </div>
         {/* end of single column */}

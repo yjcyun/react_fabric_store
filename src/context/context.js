@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { linkData } from './linkData';
 import { socialIcons } from './socialData';
 import { items } from './productData';
+import {newsData} from './newsData';
 
 const ProductContext = React.createContext();
 
@@ -11,6 +12,7 @@ class ProductProvider extends Component {
     cartOpen: false,
     links: linkData,
     social: socialIcons,
+    news:newsData,
     cart: [],
     cartItems: 0,
     cartSubtotal: 0,
@@ -19,6 +21,7 @@ class ProductProvider extends Component {
     storeProducts: [],
     filteredProducts: [],
     featuredProducts: [],
+    favouriteProducts: [],
     singleProduct: {},
     loading: true
   };
@@ -38,9 +41,13 @@ class ProductProvider extends Component {
     //featured products
     let featuredProducts = storeProducts.filter(item => item.featured === true);
 
+    //favourite product
+    let favouriteProducts = storeProducts.filter(item => item.favourite === true);
+
     this.setState({
       storeProducts,
       featuredProducts,
+      favouriteProducts,
       filteredProducts: storeProducts,
       singleProduct: this.getStorageProduct(),
       cart: this.getStorageCart(),
@@ -158,13 +165,47 @@ class ProductProvider extends Component {
 
   //cart functionality
   increment = id => {
-    
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find(item => item.id === id);
+    cartItem.count++;
+    cartItem.total = cartItem.count * cartItem.price;
+    cartItem.total = +cartItem.total.toFixed(2);
+    this.setState({
+      cart: [...tempCart],
+    }, () => {
+      this.syncStorage()
+      this.addTotals()
+    });
   };
+
   decrement = id => {
-    console.log(id);
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find(item => item.id === id);
+    cartItem.count--;
+    if (cartItem.count === 0) {
+      this.removeItem(id);
+    } else {
+      cartItem.total = cartItem.count * cartItem.price;
+      cartItem.total = +cartItem.total.toFixed(2);
+
+      this.setState({
+        cart: [...tempCart]
+      }, () => {
+        this.syncStorage()
+        this.addTotals()
+      });
+    }
   };
+
   removeItem = id => {
-    console.log(id);
+    let tempCart = [...this.state.cart];
+    tempCart = tempCart.filter(item => item.id !== id);
+    this.setState({
+      cart: [...tempCart]
+    }, () => {
+      this.syncStorage()
+      this.addTotals()
+    });
   };
 
   render() {

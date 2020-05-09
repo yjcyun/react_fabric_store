@@ -2,28 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../images/logo.svg';
 import logo2 from '../images/logo2.svg';
-import { FaBars, FaCartPlus } from 'react-icons/fa';
+import { FiMenu,FiShoppingCart} from 'react-icons/fi';
 import { ProductConsumer } from '../context';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <ProductConsumer>
       {value => {
-        const { cartItems, handleSidebar, handleCart } = value
+        const { cartItems, handleSidebar } = value
         return (
           <NavbarWrapper>
             <div className="nav-center">
-              <FaBars className="nav-icon bars" onClick={handleSidebar} />
-              <Link to='/' className="logo-link">
+              <FiMenu className="nav-icon bars" onClick={handleSidebar} />
+              <Link to='/' className="dark-link">
                 <img src={logo} alt="company logo" />
                 <span className="text-title"> THREAD & NEEDLE </span>
                 <img src={logo2} alt="company logo" />
               </Link>
-      
+
               <div className="nav-cart">
-                <FaCartPlus className="nav-icon" onClick={handleCart} />
-                <div className="cart-items">{cartItems}</div>
+                <Link to="/cart">
+                  <FiShoppingCart className="nav-icon" />
+                  <div className="cart-items">{cartItems}</div>
+                </Link>
               </div>
             </div>
           </NavbarWrapper>
@@ -48,13 +50,13 @@ const NavbarWrapper = styled.nav`
     max-width: 1170px;
     margin: 0 auto;
   }
-  .logo-link{
-   color: var(--mainBlack);
-   text-decoration:none;
-  }
   .nav-icon{
     font-size: 1.7rem;
+    color: var(--mainBlack);
     cursor: pointer
+  }
+  .bars:hover{
+    color:var(--mainColor);
   }
   .nav-cart{
     position:relative;
