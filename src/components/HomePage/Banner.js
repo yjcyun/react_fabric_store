@@ -5,7 +5,7 @@ import Title from '../Title';
 const Banner = ({ img, children, subtitle, title, message, imgWidth, order }) => {
   return (
     <BannerWrapper order={order}>
-      <div className="container">
+      <div className="container py-5">
         <div className="row">
           <div className='col-md-5 d-flex flex-column justify-content-center align-items-center text-container'>
             <div>

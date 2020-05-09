@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Favourites from '../components/Favourites';
-import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../context';
 
 const SingleProductPage = () => {

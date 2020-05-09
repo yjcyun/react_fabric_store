@@ -6,7 +6,7 @@ const Product = ({ product }) => {
   return (
     <ProductConsumer>
       {value => {
-        const { addToCart, setSingleProduct } = value;
+        const { setSingleProduct } = value;
         return (
           <div className="col-6 mx-auto col-sm-3 my-3">
             <div className="card">

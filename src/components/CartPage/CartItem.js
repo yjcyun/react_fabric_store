@@ -11,7 +11,7 @@ const CartItem = ({ cartItem, increment, decrement, removeItem }) => {
       {/* item */}
       <div className="col-11 col-lg-6 pb-4 d-flex cart-box">
         <Link
-          to="/shop/${id}">
+          to='/shop/{id}'>
           <img
             src={image}
             alt="product"
@@ -21,7 +21,7 @@ const CartItem = ({ cartItem, increment, decrement, removeItem }) => {
         <div className="pl-3">
           <div>
             <Link
-              to="/shop/${id}" className="dark-link-hover">
+              to="/shop/{id}" className="dark-link-hover">
               <span className="text-uppercase">{title}</span>
             </Link><br />
             <span className="text-capitalize">by {company}</span><br /><br />
@@ -31,7 +31,7 @@ const CartItem = ({ cartItem, increment, decrement, removeItem }) => {
               remove
             </span>
           </div>
-          <div className=" d-lg-none">
+          <div className="d-lg-none">
             <span className="unit-price">${price.toFixed(2)}</span><br />
 
             <div className="count-control">

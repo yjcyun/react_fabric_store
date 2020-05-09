@@ -25,13 +25,13 @@ const SideCart = () => {
                     return (
                       <li key={item.id} className="cart-item my-3 d-flex">
                         <Link
-                          to="/shop/${item.id}"
+                          to="/shop/{item.id}"
                           onClick={() => { setSingleProduct(item.id); closeCart() }}>
                           <img width="70" height="70" src={`../${item.image}`} alt="product" />
                         </Link>
                         <div className="ml-3">
                           <Link
-                            to="/shop/${item.id}"
+                            to="/shop/{item.id}"
                             className="dark-link-hover"
                             onClick={() => { setSingleProduct(item.id); closeCart() }}>
                             <h6 className="text-capitalize">{item.title}</h6>

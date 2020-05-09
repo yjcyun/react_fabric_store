@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { linkData } from './linkData';
 import { socialIcons } from './socialData';
 import { items } from './productData';
-import {newsData} from './newsData';
+import { newsData } from './newsData';
+
 
 const ProductContext = React.createContext();
 
@@ -12,7 +13,7 @@ class ProductProvider extends Component {
     cartOpen: false,
     links: linkData,
     social: socialIcons,
-    news:newsData,
+    news: [],
     cart: [],
     cartItems: 0,
     cartSubtotal: 0,
@@ -28,13 +29,14 @@ class ProductProvider extends Component {
 
   componentDidMount() {
     this.setProducts(items);
+    this.setNews(newsData);
   }
 
   setProducts = (products) => {
     let storeProducts = products.map(item => {
       const { id } = item.sys;
       const image = item.fields.image.fields.file.url;
-      const product = { id, ...item.fields, image: image }
+      const product = { id, ...item.fields, image: image };
       return product;
     });
 
@@ -51,11 +53,23 @@ class ProductProvider extends Component {
       filteredProducts: storeProducts,
       singleProduct: this.getStorageProduct(),
       cart: this.getStorageCart(),
-      loading: false
+      loading: false,
     }, () => {
       this.addTotals()
     });
   };
+
+  // set news 
+  setNews = articles => {
+    let news = articles.map(item => {
+      const { id } = item.sys;
+      const image = item.fields.image.fields.file.url;
+      const article = { id, ...item.fields, image: image };
+      return article;
+    });
+    this.setState({ news: news })
+
+  }
   // get cart from local storage
   getStorageCart = () => {
     let cart;

@@ -1,11 +1,12 @@
 import React from 'react';
 import Title from '../components/Title';
+import News from '../components/News';
 import aboutBcg from '../images/aboutBcg.jpg';
 
 const AboutPage = () => {
   return (
     <div className="page-margin mb-5">
-      <section className="intro mb-5">
+      <section className="intro pb-5 my-5">
         <Title title="about thread & needle" />
         <div className="container pt-5">
           <div className="row">
@@ -22,7 +23,10 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <div className="clients">
+
+      <News/>
+
+      <div className="clients page-margin my-5 pb-5">
         <Title title="clients include" />
         <div className="container mt-5">
           <div className="row">
