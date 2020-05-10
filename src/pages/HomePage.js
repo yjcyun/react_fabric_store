@@ -16,11 +16,14 @@ const HomePage = () => {
       </Hero>
       <AboutSection />
       <Featured />
+
+
       <Banner
         title="visit our store"
         subtitle="1234 Bloor Street E, Toronto, ON"
         message="We are temporarily closed due to COVID-19. Stay tuned for updates!"
         img={storeImg}>
+        
       </Banner>
       <News />
       <Banner

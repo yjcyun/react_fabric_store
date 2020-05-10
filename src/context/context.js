@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { linkData } from './linkData';
 import { socialIcons } from './socialData';
-import { items } from './productData';
+// import { items } from './productData';
 import { newsData } from './newsData';
-
+import { showcaseData } from './showcaseData';
+import { client } from './contentful';
 
 const ProductContext = React.createContext();
 
@@ -13,6 +14,7 @@ class ProductProvider extends Component {
     cartOpen: false,
     links: linkData,
     social: socialIcons,
+    showcase: showcaseData,
     news: [],
     cart: [],
     cartItems: 0,
@@ -24,19 +26,29 @@ class ProductProvider extends Component {
     featuredProducts: [],
     favouriteProducts: [],
     singleProduct: {},
-    loading: true
+    loading: true,
+    search: '',
+    company: 'all',
+    substrate: 'all'
   };
 
   componentDidMount() {
-    this.setProducts(items);
+    client
+      .getEntries({
+        content_type: "threadAndNeedle"
+      })
+      .then(response => this.setProducts(response.items))
+      .catch(console.error);
+
     this.setNews(newsData);
+   
   }
 
   setProducts = (products) => {
     let storeProducts = products.map(item => {
       const { id } = item.sys;
-      const image = item.fields.image.fields.file.url;
-      const product = { id, ...item.fields, image: image };
+      const image = item.fields.image[0].fields.file.url;
+      const product = { id, ...item.fields, image };
       return product;
     });
 
@@ -53,7 +65,7 @@ class ProductProvider extends Component {
       filteredProducts: storeProducts,
       singleProduct: this.getStorageProduct(),
       cart: this.getStorageCart(),
-      loading: false,
+      loading: false
     }, () => {
       this.addTotals()
     });
@@ -222,6 +234,53 @@ class ProductProvider extends Component {
     });
   };
 
+  clearCart = () => {
+    this.setState({
+      cart: []
+    }, () => {
+      this.addTotals();
+      this.syncStorage();
+    });
+  };
+
+  //handle filtering
+  handleChange = e => {
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({
+      [name]: value
+    }, this.sortData);
+  }
+
+  sortData = () => {
+    const { storeProducts, search, company, substrate } = this.state;
+    let tempProducts = [...storeProducts];
+
+    //filter by company
+    if (company !== 'all') {
+      tempProducts = tempProducts.filter(item => item.company === company);
+    }
+
+    //filter by substrate
+    if (substrate !== 'all') {
+      tempProducts = tempProducts.filter(item => item.substrate === substrate);
+    }
+
+    //filter by search
+    if (search.length > 0) {
+      tempProducts = tempProducts.filter(item => {
+        let tempSearch = search.toLowerCase();
+        let tempTitle = item.title.toLowerCase().slice(0, search.length);
+        if (tempSearch === tempTitle) {
+          return item;
+        }
+      });
+    }
+    this.setState({
+      filteredProducts: tempProducts
+    });
+  };
+
   render() {
     return (
       <ProductContext.Provider value={{
@@ -234,7 +293,9 @@ class ProductProvider extends Component {
         setSingleProduct: this.setSingleProduct,
         increment: this.increment,
         decrement: this.decrement,
-        removeItem: this.removeItem
+        removeItem: this.removeItem,
+        clearCart: this.clearCart,
+        handleChange: this.handleChange
       }}>
         {this.props.children}
       </ProductContext.Provider>

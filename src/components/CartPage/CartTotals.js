@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import PaypalBtn from './PaypalBtn';
 import { ProductConsumer } from '../../context';
 import { Link } from 'react-router-dom';
 
-const CartTotals = () => {
+const CartTotals = ({ history }) => {
   return (
     <CartTotalsWrapper>
       <div className="container">
         <div className="row">
           <ProductConsumer>
             {value => {
-              const { cartSubtotal, cartTotal, cartTax } = value;
+              const { clearCart, cartSubtotal, cartTotal, cartTax } = value;
               return (
                 <>
                   <div className="col-lg-4">
@@ -22,6 +23,10 @@ const CartTotals = () => {
                     <h5>subtotal ${cartSubtotal.toFixed(2)}</h5>
                     <h5>tax ${cartTax}</h5>
                     <h5>total ${cartTotal}</h5>
+                    <PaypalBtn history={history}
+                      cartTotal={cartTotal}
+                      clearCart={clearCart}
+                    />
                   </div>
                 </>
               );

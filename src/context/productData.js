@@ -6,6 +6,7 @@ export const items = [
       price: 16.00,
       company: "dear stella",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -22,6 +23,7 @@ export const items = [
       price: 16.00,
       company: "dear stella",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -38,6 +40,7 @@ export const items = [
       price: 18.00,
       company: "dear stella",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -54,6 +57,7 @@ export const items = [
       price: 13.00,
       company: "dear stella",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -70,6 +74,7 @@ export const items = [
       price: 20.00,
       company: "Cotton + Steel",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -85,7 +90,8 @@ export const items = [
       title: "by the seaside - happy fish yellow",
       price: 17.00,
       company: "Cotton + Steel",
-      material: "100% Unbleached cotton",
+      material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -103,6 +109,7 @@ export const items = [
       price: 16.00,
       company: "Cotton + Steel",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -119,6 +126,7 @@ export const items = [
       price: 16.00,
       company: "Cotton + Steel",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -135,6 +143,7 @@ export const items = [
       price: 18.00,
       company: "moda",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -151,6 +160,7 @@ export const items = [
       price: 16.00,
       company: "moda",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -167,6 +177,7 @@ export const items = [
       price: 21.00,
       company: "moda",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -183,6 +194,7 @@ export const items = [
       price: 12.00,
       company: "moda",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -199,6 +211,7 @@ export const items = [
       price: 21.00,
       company: "riley blake designs",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -215,6 +228,7 @@ export const items = [
       price: 15.00,
       company: "riley blake designs",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -231,6 +245,7 @@ export const items = [
       price: 8.00,
       company: "riley blake designs",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",
@@ -247,6 +262,7 @@ export const items = [
       price: 13.00,
       company: "riley blake designs",
       material: "100% cotton",
+      substrate: "woven cotten",
       width: "44-45\" wide",
       description:
         "Shaman hexagon fam activated charcoal literally cardigan. Pitchfork YOLO man bun hella. Trust fund vexillologist squid put a bird on it man braid, selvage pug. Schlitz kombucha chillwave pug shabby chic cornhole. Try-hard four loko listicle yuccie kitsch small batch narwhal celiac selfies distillery cloud bread farm-to-table art party leggings glossier.",

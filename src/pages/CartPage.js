@@ -2,11 +2,12 @@ import React from 'react';
 import Title from '../components/Title';
 import CartSection from '../components/CartPage/Cart';
 
-const CartPage = () => {
+const CartPage = (props) => {
+ 
   return (
     <div className="page-margin">
     <Title title="shopping cart" />
-      <CartSection />
+      <CartSection history={props.history} />
     </div>
   )
 }

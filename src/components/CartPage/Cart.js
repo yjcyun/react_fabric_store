@@ -5,7 +5,7 @@ import CartTotals from './CartTotals';
 import { ProductConsumer } from '../../context';
 import {Link} from 'react-router-dom';
 
-const Cart = () => {
+const Cart = ({history}) => {
   return (
     <section className="py-5">
       <ProductConsumer>
@@ -24,7 +24,7 @@ const Cart = () => {
                 <CartColumns />
                 <CartList />
                 <hr className="container"/>
-                <CartTotals />
+                <CartTotals history={history}/>
               </>
             )
           }

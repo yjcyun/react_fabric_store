@@ -27,7 +27,7 @@ const SideCart = () => {
                         <Link
                           to="/shop/{item.id}"
                           onClick={() => { setSingleProduct(item.id); closeCart() }}>
-                          <img width="70" height="70" src={`../${item.image}`} alt="product" />
+                          <img width="70" height="70" src={item.image} alt="product" />
                         </Link>
                         <div className="ml-3">
                           <Link

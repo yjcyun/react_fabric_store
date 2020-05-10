@@ -4,6 +4,7 @@ import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
 import SingleProductPage from './pages/SingleProductPage';
 import VisitPage from './pages/VisitPage';
+import Showcase from './pages/Showcase';
 import DefaultPage from './pages/DefaultPage';
 import ContactPage from './pages/ContactPage';
 import CartPage from './pages/CartPage';
@@ -25,6 +26,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/showcase" component={Showcase} />
         <Route path="/visit" component={VisitPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/cart" component={CartPage} />
