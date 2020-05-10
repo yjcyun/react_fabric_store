@@ -5,7 +5,7 @@ import CartSection from '../components/CartPage/Cart';
 const CartPage = (props) => {
  
   return (
-    <div className="page-margin">
+    <div className="page-margin my-5 pb-5">
     <Title title="shopping cart" />
       <CartSection history={props.history} />
     </div>
